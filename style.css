@@ -1,0 +1,189 @@
+/* BUILDWISE – die gesamte Gestaltung in einer Datei. */
+
+/* ===== STYLE ===== */
+/* Praktikum 4/5: gemeinsame Gestaltung. */
+*{box-sizing:border-box}body{margin:0;background:#101516;color:#f0f3ec;font-family:Arial,Helvetica,sans-serif;line-height:1.6;padding-bottom:58px}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:700;letter-spacing:-.04em;line-height:1.15}h1{font-size:clamp(34px,5vw,65px)}h2{font-size:28px}h3{font-size:21px}p{color:#a5ada9}a{color:inherit;text-underline-offset:4px}a:hover{color:#c7fa73}button,input,select,textarea{font:inherit}button{cursor:pointer}[hidden]{display:none!important}.container{width:min(1240px,calc(100% - 48px));margin:0 auto}.brand-dot{color:#c7fa73}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:11px;color:#c7fa73;font-weight:bold;margin-bottom:13px}.site-header{padding:24px 0 0;border-bottom:1px solid #30393a;background:#13191a}.brand{display:inline-flex;gap:12px;align-items:center;text-decoration:none;font-size:27px;font-weight:bold;line-height:1.1;margin-bottom:22px}.brand img{flex:none}.brand small{display:block;color:#a5ada9;font-weight:400;font-size:10px;letter-spacing:.09em;margin-top:6px}.page-nav{background:#191f20;padding:12px;border-radius:12px;margin-bottom:20px}.page-nav a{text-decoration:none}.course-copyright{position:fixed;bottom:0;left:0;right:0;padding:14px 20px;text-align:center;font-size:11px;background:#13191af5;border-top:1px solid #30393a;z-index:30}.skip-link{position:absolute;left:16px;top:-80px;background:#c7fa73;color:#203016;padding:12px;z-index:100}.skip-link:focus{top:10px}.button{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:#c7fa73;color:#203016;border:1px solid #b8e16e;border-radius:9px;font-size:12px;font-weight:bold;padding:12px 18px;min-height:44px;text-decoration:none}.button:hover{background:#d6ff9b;color:#203016}.button.secondary{background:#1c2422;color:#f0f3ec;border-color:#465143}.button.secondary:hover{background:#2c372a}a:focus-visible,button:focus-visible{outline:3px solid #c7fa73;outline-offset:4px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:22px}.library-empty{padding:22px;border:1px dashed #53624a;border-radius:12px;margin-top:20px}.learning-recent{background:#1b2420;border-color:#4b5c3d}.catalog-note{font-size:11px;line-height:1.8;margin-top:25px}.subscribe-card{margin-top:30px}.subscribe-card>p{font-size:12px;margin-top:10px}.subscribe-error{padding:16px;border:1px solid #ff9185;color:#ffb5a8;border-radius:10px;margin-bottom:20px}.sample-feeds{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sample-feeds button{background:#19201a;color:#c7fa73;border:1px solid #44513c;border-radius:7px;padding:7px 10px;font-size:10px}.audio-note{font-size:11px;line-height:1.8;margin-top:15px;color:#a5ada9}.error-page{min-height:65vh;display:flex;flex-direction:column;align-items:start;justify-content:center;gap:20px}.error-code{font-size:90px;color:#c7fa73}a[href^="mailto:"]::before{content:"✉ ";color:#c7fa73}.episode-table tbody tr:nth-child(odd) td{background:#c7fa7308}.episode-table thead th{background:#2a3528}.learning-description,.recent-episodes a{overflow-wrap:anywhere}
+@media(max-width:768px){.learning-card{padding:23px}.learning-page{padding-top:30px}.learning-heading{margin-bottom:27px}.section-heading{align-items:center}.learning-heading>p:last-child{font-size:15px}}
+@media(max-width:480px){.container{width:calc(100% - 32px)}.learning-card{padding:20px}.learning-heading h1{font-size:34px;overflow-wrap:anywhere}.learning-facts>div{grid-template-columns:92px minmax(0,1fr)}.learning-card h2{font-size:21px}.page-nav a{padding:7px 10px;font-size:11px}.episode-facts{grid-template-columns:minmax(0,1fr)}.podcast-art img{max-height:300px;object-fit:contain}.course-copyright{font-size:10px!important}}
+
+/* Lernbibliothek: Layout und Komponenten ergänzen das Buildwise-Design. */
+.learning-page { padding-top:42px; padding-bottom:96px; }
+.learning-heading { margin-bottom:34px; }
+.back-link { display:inline-block; color:#a5ada9; font-size:13px; margin-bottom:28px; }
+.back-link:hover,.text-link:hover { color:#c7fa73; }
+.learning-heading h1 { max-width:900px; font-size:clamp(34px,5vw,65px); line-height:1.07; margin-bottom:16px; }
+.learning-heading > p:last-child { font-size:17px; }
+.learning-heading .eyebrow { margin-bottom:13px; }
+.page-nav { display:flex; flex-wrap:wrap; gap:9px; margin-bottom:26px; }
+.page-nav a { border:1px solid #30393a; border-radius:8px; padding:8px 13px; font-size:12px; color:#a5ada9; }
+.page-nav a:hover,.page-nav [aria-current="page"] { border-color:#c7fa73; color:#c7fa73; background:#c7fa7309; }
+.server-version .page-nav { display:none; }
+.learning-card { margin:0; padding:27px; border:1px solid #30393a; background:#191d20; border-radius:16px; min-width:0; }
+.learning-card h2 { font-size:23px; letter-spacing:-.025em; line-height:1.23; }
+.learning-card .eyebrow { margin-bottom:12px; font-size:10px; }
+.learning-description { margin-top:18px; font-size:14px; line-height:1.8; }
+.podcast-info {  }
+.podcast-art {  padding:13px; }
+.podcast-art img { display:block; width:100%; height:auto; aspect-ratio:1; object-fit:cover; border-radius:11px; background:#22292a; }
+.podcast-art figcaption { display:flex; flex-direction:column; align-items:start; gap:10px; padding:14px 5px 4px; color:#f0f3ec; font-size:14px; font-weight:650; }
+.learning-badge { font-size:9px; text-transform:uppercase; letter-spacing:.13em; color:#c7fa73; }
+.podcast-episodes {  }
+.learning-recent {  }
+.learning-facts { margin:24px 0 0; display:flex; flex-direction:column; gap:14px; font-size:12px; }
+.learning-facts > div { display:grid; grid-template-columns:110px minmax(0,1fr); gap:10px; padding-bottom:12px; border-bottom:1px solid #30393a; }
+.learning-facts > div:last-child { border:0; padding-bottom:0; }
+.learning-facts dt { color:#a5ada9; }
+.learning-facts dd { margin:0; overflow-wrap:anywhere; color:#f0f3ec; }
+.text-link { text-decoration:underline; text-underline-offset:3px; text-decoration-color:#c7fa7370; }
+.learning-card-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:18px; }
+.learning-count { white-space:nowrap; border:1px solid #30393a; border-radius:30px; padding:5px 11px; color:#a5ada9; font-size:11px; }
+.table-scroll { overflow-x:auto; }
+.episode-table { border-collapse:collapse; width:100%; text-align:left; font-size:12px; }
+.episode-table caption { text-align:left; color:#a5ada9; font-size:11px; padding-bottom:14px; }
+.episode-table th { padding:12px; font-weight:500; color:#a5ada9; background:#22292a; }
+.episode-table th:first-child { border-radius:8px 0 0 8px; }
+.episode-table th:last-child { border-radius:0 8px 8px 0; }
+.episode-table td { padding:16px 12px; border-bottom:1px solid #30393a; }
+.episode-table tr:nth-child(even) td { background:#ffffff02; }
+.episode-table tbody tr:hover td { background:#c7fa730a; }
+.episode-table td:first-child { min-width:220px; }
+.episode-table a { display:flex; align-items:baseline; gap:10px; }
+.episode-table a:hover { color:#c7fa73; }
+.episode-number { color:#c7fa73; font-size:10px; }
+.episode-table td time { white-space:nowrap; }
+.recent-episodes { list-style:none; padding:0; margin:24px 0 0; }
+.recent-episodes li { display:flex; flex-direction:column; gap:7px; border-bottom:1px solid #30393a; padding:17px 0; }
+.recent-episodes li:first-child { padding-top:0; }
+.recent-episodes li time { font-size:10px; color:#a5ada9; }
+.recent-episodes li > span { font-size:10px; color:#c7fa73; }
+.recent-episodes li a { font-size:13px; line-height:1.5; font-weight:600; }
+.recent-episodes a:hover { color:#c7fa73; }
+.learning-tip { margin-top:25px; display:flex; align-items:start; gap:10px; padding:15px; background:#22292a; border-radius:10px; }
+.learning-tip > span { color:#c7fa73; font-size:22px; line-height:1.2; }
+.learning-tip p { font-size:11px; line-height:1.7; }
+.learning-bottom-note { display:flex; align-items:center; justify-content:space-between; gap:15px; padding:30px 0 0; }
+.learning-bottom-note p { font-size:13px; }
+/* Episode: Hauptbereich und Zusatzinformationen mit Flexbox. */
+.episode-facts { display:grid; grid-template-columns:1fr 1fr; gap:18px 28px; }
+.episode-facts > div { display:flex; flex-direction:column; gap:5px; }
+.audio-card { background:linear-gradient(130deg,#242e1b,#191d20 65%); border-color:#52613c; }
+.audio-card-heading { display:flex; align-items:center; gap:16px; margin-bottom:22px; }
+.audio-icon { display:flex; align-items:center; justify-content:center; width:52px; height:52px; flex-shrink:0; border-radius:14px; color:#203016; background:#c7fa73; font-size:21px; }
+.audio-card-heading .eyebrow { margin-bottom:6px; }
+.audio-card > p { font-size:13px; margin-bottom:20px; }
+.audio-card audio { width:100%; display:block; height:54px; color-scheme:dark; }
+.audio-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; color:#a5ada9; font-size:10px; margin-top:13px; }
+.reading-copy { display:flex; flex-direction:column; gap:17px; margin:22px 0; font-size:14px; line-height:1.9; }
+/* Neues Podcastformular mit benannten Grid-Bereichen. */
+.podcast-form-card {  }
+/* Internetmedien: derselbe dunkle Buildwise-Stil, responsives 16:9-Video. */
+.video-card{border-color:#53663d;background:linear-gradient(135deg,#242e1b,#1a2021 70%)}
+.video-card h2{margin-bottom:12px}
+.youtube-player{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#090d0e;margin-top:20px}
+.youtube-player>img{width:100%;height:100%;object-fit:cover;opacity:.68}
+.youtube-load{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;background:linear-gradient(transparent,#0009);border:0;color:#fff;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.youtube-play{display:flex;align-items:center;justify-content:center;width:66px;height:48px;border-radius:14px;background:#d52525;color:#fff;font-size:24px;padding-left:3px}
+.youtube-load:hover .youtube-play,.youtube-load:focus-visible .youtube-play{background:#f13b3b}
+.youtube-load:focus-visible{outline:3px solid #c7fa73;outline-offset:-4px}
+.youtube-player iframe{display:block;width:100%;height:100%;border:0}
+.media-source{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:#a1aaa2;margin-top:15px;line-height:1.7}
+.audio-status{font-size:12px;margin-top:15px;color:#f4b59e}
+
+.site-header{padding-top:18px}.brand{margin-bottom:16px}.page-nav{margin-bottom:16px}.podcast-overview .learning-heading h1{font-size:clamp(32px,4.3vw,54px)}
+
+/* ===== FORMS ===== */
+.learning-form fieldset { min-width:0; padding:0; margin:30px 0; border:0; border-top:1px solid #30393a; }
+.learning-form legend { padding:0 13px 0 0; margin-bottom:18px; font-size:13px; font-weight:700; color:#f0f3ec; }
+.form-field { display:flex; flex-direction:column; gap:8px; margin-bottom:19px; }
+.form-field label { font-size:12px; font-weight:650; }
+
+.required-symbol { color:#c7fa73; }
+.learning-form input,.learning-form textarea,.learning-form select { font:inherit; background:#101516; color:#f0f3ec; border:1px solid #30393a; border-radius:9px; width:100%; min-height:46px; padding:12px 13px; font-size:13px; }
+.learning-form textarea { resize:vertical; }
+.learning-form select[multiple] { padding:8px; }
+.learning-form option { padding:7px; border-radius:4px; }
+.learning-form ::placeholder { color:#7f8984; }
+.learning-form input:focus,.learning-form textarea:focus,.learning-form select:focus { outline:2px solid #c7fa73; outline-offset:3px; }
+
+.learning-form input:invalid:not(:placeholder-shown) { border-color:#ff9185; }
+.learning-form small { color:#a5ada9; font-size:10px; line-height:1.6; }
+.form-field-pair { display:flex; gap:18px; }
+.form-field-pair > .form-field { flex:1 1 0; min-width:0; }
+.form-submit-row { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.form-submit-row > p { flex-basis:100%; margin-bottom:8px; font-size:11px; }
+
+/* Praktikum 3/5: native Validierung, Gruppen oben, Inputs nur unten. */
+label,legend{font-weight:bold}.learning-form fieldset{border:0;border-top:1px solid #66715e;padding:15px 0 0;margin:30px 0}.learning-form legend{border:0;border-left:1px solid #66715e;border-right:1px solid #66715e;border-radius:6px;padding:0 10px}.learning-form input:not([type=checkbox]):not([type=radio]){border:0;border-bottom:1px solid #64725e;border-radius:0;background:transparent;padding-inline:3px}.learning-form input:focus,.library-search input:focus,.subscribe-form input:focus{background:#c7fa7312;outline:2px solid #c7fa73;outline-offset:3px}.learning-form input:user-invalid,.library-search input:user-invalid,.subscribe-form input:user-invalid{border-bottom-color:#ff9185;background:#ff918510}.required-symbol::before,.required-indicator::after{content:"*";color:#ff9185}.required-indicator{font-size:14px;line-height:1}.library-search,.subscribe-form{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 25px}.subscribe-form{margin:20px 0 0}.search-field{flex:1;min-width:190px;position:relative}.search-field label{font-size:12px;display:block;margin-bottom:7px;color:#a5ada9}.search-field input{width:100%;background:#191d20;color:#f0f3ec;border:0;border-bottom:1px solid #64725e;border-radius:0;padding:12px 18px 12px 0;min-height:44px;font-size:13px}.search-field .required-indicator{position:absolute;right:4px;bottom:15px}.learning-form .required-indicator{margin-top:-8px}.form-field-pair{display:flex;gap:18px}.form-field-pair>.form-field{flex:1;min-width:0}.form-submit-row{display:flex;flex-wrap:wrap;gap:10px}.form-submit-row>p{flex-basis:100%;font-size:11px}.form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:19px}.learning-form small{font-size:10px;color:#a5ada9;line-height:1.6}
+@media(max-width:480px){.form-field-pair{flex-direction:column;gap:0}.library-search .search-field{flex-basis:100%}}
+
+/* ===== FLEX ===== */
+/* Praktikum 6/7: Seitenlayout mit Flexbox. */
+.library-layout,.episode-layout{display:flex;gap:25px;align-items:flex-start}.library-main,.episode-main{flex:1;min-width:0}.library-layout>.learning-recent,.episode-layout>.learning-recent{flex:0 0 255px}.episode-main{display:flex;flex-direction:column;gap:20px}.page-nav{display:flex;flex-wrap:wrap;gap:9px}
+@media(max-width:768px){.library-layout,.episode-layout{flex-direction:column}.library-layout>.learning-recent,.episode-layout>.learning-recent,.library-main,.episode-main{width:100%;flex:auto}}
+
+/* ===== GRID ===== */
+/* Praktikum 6/7: Benannte Grid-Bereiche für Podcast und Formular. */
+.podcast-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(180px,1fr) minmax(200px,.85fr);grid-template-areas:"info image recent" "episodes episodes recent";gap:20px}
+.new-podcast-layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;grid-template-areas:"form recent";gap:20px}
+@media(max-width:768px){.podcast-layout{grid-template-columns:minmax(0,1.2fr) minmax(155px,1fr);grid-template-areas:"info image" "episodes episodes" "recent recent"}.new-podcast-layout{grid-template-columns:1fr;grid-template-areas:"form" "recent"}}
+@media(max-width:480px){.podcast-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"info" "episodes" "image" "recent"}}
+
+.podcast-info{grid-area:info}.podcast-art{grid-area:image}.podcast-episodes{grid-area:episodes}.learning-recent{grid-area:recent}.podcast-form-card{grid-area:form}
+
+/* ===== INDEX ===== */
+/* Praktikum 7/9: quadratische Flex-Kacheln ohne Mediaqueries. */
+.podcast-collection{display:flex;flex-wrap:wrap;gap:14px;list-style:none;padding:0;margin:0}
+/* Die quadratischen Kacheln brechen mit Flexbox um, ohne Mediaquery. */
+.podcast-tile{flex:0 0 185px;aspect-ratio:1;border:1px solid #303639;border-radius:14px;background:#191d20;overflow:hidden;max-width:100%}
+.podcast-tile>a{display:flex;flex-direction:column;justify-content:end;position:relative;height:100%;padding:16px;isolation:isolate;overflow:hidden}
+.podcast-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .25s}
+.podcast-tile>a::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,#07100bc9);z-index:-1}
+.podcast-tile:hover{border-color:#c7fa73}
+.podcast-tile:hover img{transform:scale(1.045)}
+.podcast-tile strong{font-size:16px;line-height:1.3;max-width:160px}
+.podcast-tile .episode-count{display:none}
+.podcast-collection.podcast-list{flex-direction:column;gap:10px}
+.podcast-list .podcast-tile{aspect-ratio:auto;flex:auto;border-radius:10px}
+.podcast-list .podcast-tile>a{padding:16px 19px;flex-direction:row;align-items:center;justify-content:space-between;gap:15px}
+.podcast-list .podcast-tile img,.podcast-list .podcast-tile>a::after{display:none}
+.podcast-list .podcast-tile strong{font-size:14px;max-width:none}
+.podcast-list .episode-count{display:block;font-size:11px;color:#a5ada9;white-space:nowrap}
+
+.podcast-tile[hidden]{display:none}.library-view[aria-pressed=true]{border-color:#c7fa73;color:#c7fa73}
+
+/* ===== PC-FINDER ===== */
+/* Auswahlkarten statt einfacher Radiobuttons; Ergebnis daneben bzw. darunter. */
+.finder-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:20px;align-items:start}
+@media(max-width:768px){.finder-layout{grid-template-columns:minmax(0,1fr)}}
+.finder-form fieldset:first-of-type{margin-top:22px}
+.choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.usage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.choice-card{position:relative;display:flex;flex-direction:column;gap:3px;padding:14px;border:1px solid #30393a;border-radius:12px;background:#101516;cursor:pointer;font-weight:400;transition:border-color .15s,background .15s}
+.choice-card:hover{border-color:#66715e}
+.choice-card:has(input:checked){border-color:#c7fa73;background:#c7fa7310}
+.choice-card:has(input:focus-visible){outline:3px solid #c7fa73;outline-offset:3px}
+.learning-form .choice-card input{position:absolute;inset:0;width:100%;height:100%;min-height:0;margin:0;opacity:0;cursor:pointer}
+.choice-icon{font-size:22px;line-height:1.2;margin-bottom:4px}
+.choice-card strong{font-size:14px;color:#f0f3ec}
+.choice-card:has(input:checked) strong{color:#c7fa73}
+.choice-card small{font-size:11px;color:#a5ada9;line-height:1.5}
+.finder-result h3{font-size:15px;letter-spacing:-.01em;margin-top:28px}
+.finder-result .learning-tip{margin-top:20px}
+.finder-result .learning-tip p{font-size:12px;color:#f0f3ec}
+.finder-budget-note{margin-top:14px;padding:13px 15px;border:1px dashed #53624a;border-radius:10px;font-size:12px}
+.finder-weights{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:10px}
+.finder-weights li{display:grid;grid-template-columns:120px minmax(0,1fr) 34px;align-items:center;gap:12px;font-size:12px}
+.weight-bar{height:8px;border-radius:8px;background:#22292a;overflow:hidden}
+.weight-bar>span{display:block;height:100%;border-radius:8px;background:#c7fa73}
+.weight-1>span{width:20%}.weight-2>span{width:40%}.weight-3>span{width:60%}.weight-4>span{width:80%}.weight-5>span{width:100%}
+.weight-value{color:#a5ada9;font-size:11px;text-align:right}
+.finder-result .learning-facts{margin-top:14px}
+.finder-tips{margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:#a5ada9}
+.finder-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.finder-teaser{margin-top:20px;padding:16px;border:1px solid #4b5c3d;border-radius:10px;background:#c7fa7308}
+.finder-teaser .eyebrow{margin-bottom:8px}
+.finder-teaser p:not(.eyebrow){font-size:12px;margin-bottom:14px}
+.finder-teaser .button{width:100%}
+@media(max-width:480px){.finder-weights li{grid-template-columns:96px minmax(0,1fr) 30px}}
+
+#main-content:focus{outline:none}.page-nav a[aria-current="page"]{background:#c7fa7312;border-color:#c7fa73;color:#c7fa73}
